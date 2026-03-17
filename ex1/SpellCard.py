@@ -10,7 +10,7 @@ class SpellCard(Card):
         """Init Spelle Card."""
         super().__init__(name, cost, rarity)
         self.effect_type = effect_type
-        self.card_type = CardType.SPELL
+        self.card_type = CardType.SPELL.value
 
     def play(self, game_state: dict) -> dict:
         """Play Card."""

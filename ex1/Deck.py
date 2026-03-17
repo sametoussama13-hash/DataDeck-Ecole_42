@@ -38,11 +38,11 @@ class Deck:
         total_cost: int = 0
         for card in self.card_list:
             total_cost += card.cost
-            if card.card_type == CardType.CREATURE:
+            if card.card_type == CardType.CREATURE.value:
                 stats["creatures"] += 1
-            elif card.card_type == CardType.ARTIFACT:
+            elif card.card_type == CardType.ARTIFACT.value:
                 stats["artifacts"] += 1
-            elif card.card_type == CardType.SPELL:
+            elif card.card_type == CardType.SPELL.value:
                 stats["spells"] += 1
         stats["avg_cost"] = round(total_cost / len(self.card_list), 1)
         return stats

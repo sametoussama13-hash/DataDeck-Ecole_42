@@ -11,7 +11,7 @@ class CreatureCard(Card):
         super().__init__(name, cost, rarity)
         self.attack = attack
         self.health = health
-        self.card_type = CardType.CREATURE
+        self.card_type = CardType.CREATURE.value
 
     def play(self, game_state: dict) -> dict:
         """Play Card."""

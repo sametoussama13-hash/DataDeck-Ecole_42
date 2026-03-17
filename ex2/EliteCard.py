@@ -38,7 +38,7 @@ class EliteCard(Card, Magical, Combatable):
 
     def defend(self, incoming_damage: int) -> dict:
         """Defend Combatable."""
-        if self.health > self.health:
+        if incoming_damage > self.health:
             b: bool = False
         else:
             b: bool = True
